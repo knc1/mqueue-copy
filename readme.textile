@@ -1,0 +1,23 @@
+h1(#name). Name
+
+_mq&#95;copy_ &#45; Command line interface to Linux, POSIX, message queues.
+
+h1(#description). Description
+
+Provides a command line interface, usable by scripting languages, to the Linux system of POSIX message queues.
+
+The Linux system provides the POSIX message queues as a modified file descriptor. The default location is under the directory: _/dev/mqueue_ .
+
+POSIX message queues have kernel persistence. If not removed by _unlink_, the queue will exist until the system is shut down. The action: _"unlink on close"_ is a _mq&#95;copy_ command line option.
+
+POSIX message queues allow processes to exchange data in the form of messages.
+
+_mq&#95;copy_ supports line oriented, "C" string messages. That is, lines terminated by the new&#45;line character.
+
+_mq&#95;copy_ provides two basic functions: _copy&#95;in_ and _copy&#95;out_.
+
+* The _copy&#45;in_ function copies line oriented strings on _stdin_ as messages to a specified queue.
+* The _copy&#45;out_ function copies messages from the specified queue as line oriented strings to _stdout_.
+
+h1(#arguments). Arguments
+
