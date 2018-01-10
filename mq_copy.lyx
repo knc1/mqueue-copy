@@ -1,0 +1,209 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass paper
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans helvet
+\font_typewriter default
+\font_math auto
+\font_default_family sfdefault
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 1in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip smallskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle plain
+\bullet 1 0 9 -1
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Name
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+mq_copy
+\emph default
+ - Command line interface to Linux, POSIX, message queues.
+\end_layout
+
+\begin_layout Section
+Description
+\end_layout
+
+\begin_layout Standard
+Provides a command line interface, usable by scripting languages, to the
+ Linux system of POSIX message queues.
+\end_layout
+
+\begin_layout Standard
+The Linux system provides the POSIX message queues as a modified file descriptor.
+ The default location is under the directory: 
+\emph on
+/dev/mqueue
+\emph default
+ .
+\end_layout
+
+\begin_layout Standard
+POSIX message queues have kernel persistence.
+ If not removed by 
+\emph on
+unlink
+\emph default
+, the queue will exist until the system is shut down.
+ The action: 
+\emph on
+
+\begin_inset Quotes eld
+\end_inset
+
+unlink on close
+\begin_inset Quotes erd
+\end_inset
+
+
+\emph default
+ is a 
+\emph on
+mq_copy
+\emph default
+ command line option.
+\end_layout
+
+\begin_layout Standard
+POSIX message queues allow processes to exchange data in the form of messages.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+mq_copy
+\emph default
+ supports line oriented, 
+\begin_inset Quotes eld
+\end_inset
+
+C
+\begin_inset Quotes erd
+\end_inset
+
+ string messages.
+ That is, lines terminated by the new-line character.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+mq_copy
+\emph default
+ provides two basic functions: 
+\emph on
+copy_in
+\emph default
+ and 
+\emph on
+copy_out
+\emph default
+.
+\end_layout
+
+\begin_layout Itemize
+The 
+\emph on
+copy-in
+\emph default
+ function copies line oriented strings on 
+\emph on
+stdin
+\emph default
+ as messages to a specified queue.
+\end_layout
+
+\begin_layout Itemize
+The 
+\emph on
+copy-out
+\emph default
+ function copies messages from the specified queue as line oriented strings
+ to 
+\emph on
+stdout
+\emph default
+.
+\end_layout
+
+\begin_layout Section
+Arguments
+\end_layout
+
+\end_body
+\end_document

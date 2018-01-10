@@ -1,0 +1,64 @@
+%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{paper}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+\pagestyle{plain}
+\setlength{\parskip}{\smallskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{babel}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false]
+ {hyperref}
+
+\makeatletter
+\@ifundefined{date}{}{\date{}}
+\AtBeginDocument{
+  \def\labelitemii{\(\circ\)}
+}
+
+\makeatother
+
+\begin{document}
+
+\section{Name}
+
+\emph{mq\_copy} - Command line interface to Linux, POSIX, message
+queues.
+
+
+\section{Description}
+
+Provides a command line interface, usable by scripting languages,
+to the Linux system of POSIX message queues.
+
+The Linux system provides the POSIX message queues as a modified file
+descriptor. The default location is under the directory: \emph{/dev/mqueue}
+.
+
+POSIX message queues have kernel persistence. If not removed by \emph{unlink},
+the queue will exist until the system is shut down. The action: \emph{``unlink
+on close''} is a \emph{mq\_copy} command line option.
+
+POSIX message queues allow processes to exchange data in the form
+of messages.
+
+\emph{mq\_copy} supports line oriented, ``C'' string messages. That
+is, lines terminated by the new-line character.
+
+\emph{mq\_copy} provides two basic functions: \emph{copy\_in} and
+\emph{copy\_out}.
+\begin{itemize}
+\item The \emph{copy-in} function copies line oriented strings on \emph{stdin}
+as messages to a specified queue.
+\item The \emph{copy-out} function copies messages from the specified queue
+as line oriented strings to \emph{stdout}.
+\end{itemize}
+
+\section{Arguments}
+\end{document}

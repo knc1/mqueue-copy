@@ -1,0 +1,14 @@
+
+
+### Start with the userstore exec flag on FW >= 5.4 
+
+install_fw54_exec_userstore_flag() {
+    # Make sure we're on FW >= 5.4...
+    if [ "x${K5_ATLEAST_54}" == "xtrue" ] ; then
+        logmsg "I" "install_fw54_exec_userstore_flag" "" "Creating exec flag file"
+        touch "${sysMAIN}/MNTUS_EXEC" 2>/dev/null
+        print_centered " FW Execute Flag "
+    fi
+}
+
+[ ! -f "${sysMAIN}/MNTUS_EXEC" ] && install_fw54_exec_userstore_flag || true
