@@ -37,11 +37,49 @@ h2(#options). Options
 
  [ &#45;&#45;exclusive &#124; &#45;&#45;ex &#124; &#45;x ] Create queue on open, queue must not exist.
 
- default  Open existing queue
+ Default  Open existing queue
 
  [ &#45;&#45;ro &#124; &#45;r ] Open queue as read&#45;only
 
  [ &#45;&#45;wo &#124; &#45;w ] Open queue as write&#45;only
 
- default Open queue as read&#45;write
+ Default Open queue as read&#45;write
+
+ [ &#45;&#45;mode &#124; &#45;&#45;md &#124; &#45;m ] &lt;perm&gt; Set user and group permissions. Permissions must be either three or four octal digits (not symbols).
+
+ Default 0660
+
+ [ &#45;&#45;attributes &#124; &#45;&#45;at &#124; &#45;a ] &lt;at&#45;list&gt; One or more, comma separated, name=value pairs or feature.
+
+ Example, showing default values:
+
+&#45;a maxmsgs=10,msgsize=256,noblock
+
+where:
+
+maxmsgs: The maximum number of messages the queue will hold.
+
+msgsize: The maximum byte length of any single message.
+
+noblock: Disable the default blocking behavior (disabled).
+
+ [ &#45;&#45;no&#45;block &#124; &#45;&#45;nb &#124; &#45;n ] Open descriptor as non&#45;blocking.
+
+ Default Blocking (Non&#45;blocking operation is disabled.)
+
+ [ &#45;&#45;time &#124; &#45;t ] &lt;tenths second&gt; Set maximum time to block in tenths of a second.
+
+Copy&#45;in will block if no space on queue for a new message.
+
+Copy&#45;out will block if no message on queue to be read.
+
+ Default No time limit for condition to clear.
+
+ [ &#45;&#45;priority &#124; &#45;&#45;pri &#124; &#45;p ] &lt;0 .. 31&gt; Set the message priority during Copy&#45;in.
+
+ Default 15
+
+Lower value is a higher priority. The mqueue delivers the oldest message of the highest priority first.
+
+ [ &#45;&#45;unlink &#124; &#45;&#45;ul &#124; &#45;u ] Unlink (delete name) queue name prior to close. Like a file descriptor, the queue remains available to any queue descriptor that has it open at the time of the unlink.
 

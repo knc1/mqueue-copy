@@ -377,7 +377,7 @@ Create queue on open, queue must not exist.
 \begin_inset space ~
 \end_inset
 
-default 
+Default 
 \begin_inset space \qquad{}
 \end_inset
 
@@ -386,6 +386,10 @@ default
 \end_inset
 
 Open existing queue
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -440,7 +444,7 @@ Open queue as write-only
 \begin_inset space ~
 \end_inset
 
-default
+Default
 \begin_inset space \qquad{}
 \end_inset
 
@@ -449,6 +453,323 @@ default
 \end_inset
 
 Open queue as read-write
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[ \SpecialChar \nobreakdash-
+\SpecialChar \nobreakdash-
+mode | \SpecialChar \nobreakdash-
+\SpecialChar \nobreakdash-
+md | \SpecialChar \nobreakdash-
+m ]
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+<perm>
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Set user and group permissions.
+ Permissions must be either three or four octal digits (not symbols).
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Default
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+0660
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[ \SpecialChar \nobreakdash-
+\SpecialChar \nobreakdash-
+attributes | \SpecialChar \nobreakdash-
+\SpecialChar \nobreakdash-
+at | \SpecialChar \nobreakdash-
+a ]
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+<at-list>
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+One or more, comma separated, name=value pairs or feature.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Example, showing default values:
+\end_layout
+
+\begin_layout LyX-Code
+-a maxmsgs=10,msgsize=256,noblock
+\end_layout
+
+\begin_layout LyX-Code
+where:
+\end_layout
+
+\begin_layout LyX-Code
+maxmsgs: The maximum number of messages the queue will hold.
+\end_layout
+
+\begin_layout LyX-Code
+msgsize: The maximum byte length of any single message.
+\end_layout
+
+\begin_layout LyX-Code
+noblock: Disable the default blocking behavior (disabled).
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[ \SpecialChar \nobreakdash-
+\SpecialChar \nobreakdash-
+no-block | \SpecialChar \nobreakdash-
+\SpecialChar \nobreakdash-
+nb | \SpecialChar \nobreakdash-
+n ]
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Open descriptor as non-blocking.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Default
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Blocking (Non-blocking operation is disabled.)
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[ \SpecialChar \nobreakdash-
+\SpecialChar \nobreakdash-
+time | \SpecialChar \nobreakdash-
+t ]
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+<tenths second>
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Set maximum time to block in tenths of a second.
+\end_layout
+
+\begin_layout Standard
+Copy-in will block if no space on queue for a new message.
+ 
+\end_layout
+
+\begin_layout Standard
+Copy-out will block if no message on queue to be read.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Default
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+No time limit for condition to clear.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[ ‑‑priority | \SpecialChar \nobreakdash-
+\SpecialChar \nobreakdash-
+pri | \SpecialChar \nobreakdash-
+p ]
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+<0 ..
+ 31>
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Set the message priority during Copy-in.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Default
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+15
+\end_layout
+
+\begin_layout Standard
+Lower value is a higher priority.
+ The mqueue delivers the oldest message of the highest priority first.
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+[ \SpecialChar \nobreakdash-
+\SpecialChar \nobreakdash-
+unlink | \SpecialChar \nobreakdash-
+\SpecialChar \nobreakdash-
+ul | \SpecialChar \nobreakdash-
+u ]
+\begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Unlink (delete name) queue name prior to close.
+ Like a file descriptor, the queue remains available to any queue descriptor
+ that has it open at the time of the unlink.
 \end_layout
 
 \end_body

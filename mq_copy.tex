@@ -18,6 +18,18 @@
  {hyperref}
 
 \makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newenvironment{lyxcode}
+{\par\begin{list}{}{
+\setlength{\rightmargin}{\leftmargin}
+\setlength{\listparindent}{0pt}% needed for AMS classes
+\raggedright
+\setlength{\itemsep}{0pt}
+\setlength{\parsep}{0pt}
+\normalfont\ttfamily}%
+ \item[]}
+{\end{list}}
+
 \@ifundefined{date}{}{\date{}}
 \AtBeginDocument{
   \def\labelitemii{\(\circ\)}
@@ -93,7 +105,8 @@ on open
 | \nobreakdash-x {]}\qquad{}~Create queue on open, queue must not
 exist.
 
-\qquad{}~default \qquad{}~Open existing queue
+\qquad{}~Default \qquad{}~Open existing queue\smallskip{}
+
 
 \qquad{}~{[} \nobreakdash-\nobreakdash-ro | \nobreakdash-r {]}\qquad{}~Open
 queue as read-only
@@ -101,5 +114,63 @@ queue as read-only
 \qquad{}~{[} \nobreakdash-\nobreakdash-wo | \nobreakdash-w {]}\qquad{}~Open
 queue as write-only
 
-\qquad{}~default\qquad{}~Open queue as read-write
+\qquad{}~Default\qquad{}~Open queue as read-write\smallskip{}
+
+
+\qquad{}~{[} \nobreakdash-\nobreakdash-mode | \nobreakdash-\nobreakdash-md
+| \nobreakdash-m {]}\qquad{}~<perm>\qquad{}~Set user and group
+permissions. Permissions must be either three or four octal digits
+(not symbols).
+
+\qquad{}~Default\qquad{}~0660
+
+\qquad{}~{[} \nobreakdash-\nobreakdash-attributes | \nobreakdash-\nobreakdash-at
+| \nobreakdash-a {]}\qquad{}~<at-list>\qquad{}~One or more, comma
+separated, name=value pairs or feature.
+
+\qquad{}~Example, showing default values:
+\begin{lyxcode}
+-a~maxmsgs=10,msgsize=256,noblock
+
+where:
+
+maxmsgs:~The~maximum~number~of~messages~the~queue~will~hold.
+
+msgsize:~The~maximum~byte~length~of~any~single~message.
+
+noblock:~Disable~the~default~blocking~behavior~(disabled).
+\end{lyxcode}
+\smallskip{}
+
+
+\qquad{}~{[} \nobreakdash-\nobreakdash-no-block | \nobreakdash-\nobreakdash-nb
+| \nobreakdash-n {]}\qquad{}~Open descriptor as non-blocking.
+
+\qquad{}~Default\qquad{}~Blocking (Non-blocking operation is disabled.)
+
+\qquad{}~{[} \nobreakdash-\nobreakdash-time | \nobreakdash-t
+{]}\qquad{}~<tenths second>\qquad{}~Set maximum time to block
+in tenths of a second.
+
+Copy-in will block if no space on queue for a new message. 
+
+Copy-out will block if no message on queue to be read.
+
+\qquad{}~Default\qquad{}~No time limit for condition to clear.\smallskip{}
+
+
+\qquad{}~{[} \nobreakdash-\nobreakdash-priority | \nobreakdash-\nobreakdash-pri
+| \nobreakdash-p {]}\qquad{}~<0 .. 31>\qquad{}~Set the message
+priority during Copy-in. 
+
+\qquad{}~Default\qquad{}~15
+
+Lower value is a higher priority. The mqueue delivers the oldest message
+of the highest priority first.\smallskip{}
+
+
+\qquad{}~{[} \nobreakdash-\nobreakdash-unlink | \nobreakdash-\nobreakdash-ul
+| \nobreakdash-u {]}\qquad{}~Unlink (delete name) queue name prior
+to close. Like a file descriptor, the queue remains available to any
+queue descriptor that has it open at the time of the unlink.
 \end{document}
