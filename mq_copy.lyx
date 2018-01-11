@@ -83,6 +83,15 @@
 
 \begin_body
 
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Name
 \end_layout
@@ -198,11 +207,30 @@ Arguments
 \end_layout
 
 \begin_layout Standard
+\begin_inset space \qquad{}
+\end_inset
+
 
 \emph on
 mq_copy
 \emph default
- [--in | --out] [options] 
+
+\begin_inset space \qquad{}
+\end_inset
+
+[ \SpecialChar \nobreakdash-
+\SpecialChar \nobreakdash-
+in | \SpecialChar \nobreakdash-
+\SpecialChar \nobreakdash-
+out ]
+\begin_inset space \qquad{}
+\end_inset
+
+[ options ]
+\begin_inset space \qquad{}
+\end_inset
+
+
 \emph on
 /queue_name
 \end_layout
@@ -219,6 +247,128 @@ The minimum command arguments are the function, either
  (copy_out) and the name of an existing queue.
  The GLIBC library requires that the queue name begin with the path separator
  character '/'.
+\end_layout
+
+\begin_layout Subsection
+Function
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \qquad{}
+\end_inset
+
+[ \SpecialChar \nobreakdash-
+\SpecialChar \nobreakdash-
+ci | \SpecialChar \nobreakdash-
+\SpecialChar \nobreakdash-
+in | \SpecialChar \nobreakdash-
+i ]
+\begin_inset space \qquad{}
+\end_inset
+
+copy stdin to queue
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \qquad{}
+\end_inset
+
+[ \SpecialChar \nobreakdash-
+\SpecialChar \nobreakdash-
+co | \SpecialChar \nobreakdash-
+\SpecialChar \nobreakdash-
+out | \SpecialChar \nobreakdash-
+o ]
+\begin_inset space \qquad{}
+\end_inset
+
+copy queue to stdout
+\end_layout
+
+\begin_layout Subsection
+Options
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \qquad{}
+\end_inset
+
+[ \SpecialChar \nobreakdash-
+\SpecialChar \nobreakdash-
+create | \SpecialChar \nobreakdash-
+\SpecialChar \nobreakdash-
+cr | \SpecialChar \nobreakdash-
+c ]
+\begin_inset space \qquad{}
+\end_inset
+
+Create queue if not already present on open
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \qquad{}
+\end_inset
+
+[ \SpecialChar \nobreakdash-
+\SpecialChar \nobreakdash-
+exclusive | \SpecialChar \nobreakdash-
+\SpecialChar \nobreakdash-
+ex | \SpecialChar \nobreakdash-
+x ] 
+\begin_inset space \qquad{}
+\end_inset
+
+Create queue on open, queue must not exist.
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \qquad{}
+\end_inset
+
+default
+\begin_inset space \qquad{}
+\end_inset
+
+Open existing queue
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \qquad{}
+\end_inset
+
+[ \SpecialChar \nobreakdash-
+\SpecialChar \nobreakdash-
+ro | \SpecialChar \nobreakdash-
+r ]
+\begin_inset space \qquad{}
+\end_inset
+
+Open queue as read-only
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \qquad{}
+\end_inset
+
+[ \SpecialChar \nobreakdash-
+\SpecialChar \nobreakdash-
+wo | \SpecialChar \nobreakdash-
+w ]
+\begin_inset space \qquad{}
+\end_inset
+
+Open queue as write-only
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \qquad{}
+\end_inset
+
+default
+\begin_inset space \qquad{}
+\end_inset
+
+Open queue as read-write
 \end_layout
 
 \end_body

@@ -4,28 +4,20 @@
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{luainputenc}
+\usepackage[latin9]{inputenc}
 \usepackage[letterpaper]{geometry}
 \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
 \pagestyle{plain}
 \setlength{\parskip}{\smallskipamount}
 \setlength{\parindent}{0pt}
 \usepackage{babel}
+\usepackage{amsmath}
 \usepackage[unicode=true,pdfusetitle,
  bookmarks=true,bookmarksnumbered=true,bookmarksopen=false,
  breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false]
  {hyperref}
 
 \makeatletter
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
-\newenvironment{lyxlist}[1]
-{\begin{list}{}
-{\settowidth{\labelwidth}{#1}
- \setlength{\leftmargin}{\labelwidth}
- \addtolength{\leftmargin}{\labelsep}
- \renewcommand{\makelabel}[1]{##1\hfil}}}
-{\end{list}}
-
 \@ifundefined{date}{}{\date{}}
 \AtBeginDocument{
   \def\labelitemii{\(\circ\)}
@@ -73,7 +65,8 @@ as line oriented strings to \emph{stdout}.
 
 \section{Arguments}
 
-\emph{mq\_copy} {[}--in | --out{]} {[}options{]} \emph{/queue\_name}
+\qquad{}\emph{mq\_copy}\qquad{}{[} \nobreakdash-\nobreakdash-in
+| \nobreakdash-\nobreakdash-out {]}\qquad{}{[} options {]}\qquad{}\emph{/queue\_name}
 
 The minimum command arguments are the function, either \emph{--in}
 (copy\_in) or \emph{--out} (copy\_out) and the name of an existing
@@ -82,18 +75,31 @@ path separator character '/'.
 
 
 \subsection{Function}
-\begin{lyxlist}{00.00.0000}
-\item [{--ci~--in~-i}] copy stdin to queue
-\item [{--co~--out~-o}] copy queue to stdout
-\end{lyxlist}
+
+\qquad{}{[} \nobreakdash-\nobreakdash-ci | \nobreakdash-\nobreakdash-in
+| \nobreakdash-i {]}\qquad{}copy stdin to queue
+
+\qquad{}{[} \nobreakdash-\nobreakdash-co | \nobreakdash-\nobreakdash-out
+| \nobreakdash-o {]}\qquad{}copy queue to stdout
+
 
 \subsection{Options}
-\begin{description}
-\item [{--create~--cr~-c}] Create queue if not already present on open
-\item [{--exclusive~--ex~-x}] Create queue on open, queue must not exist.
-\item [{default}] Open existing queue
-\item [{--ro~-r}] Open queue as read-only
-\item [{--wo~-w}] Open queue as write-only
-\item [{default}] Open queue as read-write\end{description}
 
+\qquad{}{[} \nobreakdash-\nobreakdash-create | \nobreakdash-\nobreakdash-cr
+| \nobreakdash-c {]}\qquad{}Create queue if not already present
+on open
+
+\qquad{}{[} \nobreakdash-\nobreakdash-exclusive | \nobreakdash-\nobreakdash-ex
+| \nobreakdash-x {]} \qquad{}Create queue on open, queue must not
+exist.
+
+\qquad{}default\qquad{}Open existing queue
+
+\qquad{}{[} \nobreakdash-\nobreakdash-ro | \nobreakdash-r {]}\qquad{}Open
+queue as read-only
+
+\qquad{}{[} \nobreakdash-\nobreakdash-wo | \nobreakdash-w {]}\qquad{}Open
+queue as write-only
+
+\qquad{}default\qquad{}Open queue as read-write
 \end{document}
