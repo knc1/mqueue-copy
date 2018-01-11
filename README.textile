@@ -12,7 +12,7 @@ POSIX message queues have kernel persistence. If not removed by _unlink_, the qu
 
 POSIX message queues allow processes to exchange data in the form of messages.
 
-_mq&#95;copy_ supports line oriented, "C" string messages. That is, lines terminated by the new&#45;line character.
+_mq&#95;copy_ supports line oriented, string messages. That is, lines terminated by the new&#45;line character.
 
 _mq&#95;copy_ provides two basic functions: _copy&#95;in_ and _copy&#95;out_.
 
@@ -20,4 +20,33 @@ _mq&#95;copy_ provides two basic functions: _copy&#95;in_ and _copy&#95;out_.
 * The _copy&#45;out_ function copies messages from the specified queue as line oriented strings to _stdout_.
 
 h1(#arguments). Arguments
+
+_mq&#95;copy_ [ - in &#124;  - out] [options] _/queue&#95;name_
+
+The minimum command arguments are the function, either _ - in_ (copy&#95;in) or _ - out_ (copy&#95;out) and the name of an existing queue. The GLIBC library requires that the queue name begin with the path separator character '/'.
+
+h2(#function). Function
+
+00.00.0000
+
+copy stdin to queue
+
+copy queue to stdout
+
+h2(#options). Options
+
+<dl>
+<dt> - create  - cr &#45;c</dt>
+<dd><p>Create queue if not already present on open</p></dd>
+<dt> - exclusive  - ex &#45;x</dt>
+<dd><p>Create queue on open, queue must not exist.</p></dd>
+<dt>default</dt>
+<dd><p>Open existing queue</p></dd>
+<dt> - ro &#45;r</dt>
+<dd><p>Open queue as read&#45;only</p></dd>
+<dt> - wo &#45;w</dt>
+<dd><p>Open queue as write&#45;only</p></dd>
+<dt>default</dt>
+<dd><p>Open queue as read&#45;write</p></dd>
+</dl>
 

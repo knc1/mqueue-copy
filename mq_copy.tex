@@ -4,7 +4,7 @@
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage[T1]{fontenc}
-\usepackage[latin9]{inputenc}
+\usepackage[utf8]{luainputenc}
 \usepackage[letterpaper]{geometry}
 \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
 \pagestyle{plain}
@@ -17,6 +17,15 @@
  {hyperref}
 
 \makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\newenvironment{lyxlist}[1]
+{\begin{list}{}
+{\settowidth{\labelwidth}{#1}
+ \setlength{\leftmargin}{\labelwidth}
+ \addtolength{\leftmargin}{\labelsep}
+ \renewcommand{\makelabel}[1]{##1\hfil}}}
+{\end{list}}
+
 \@ifundefined{date}{}{\date{}}
 \AtBeginDocument{
   \def\labelitemii{\(\circ\)}
@@ -25,6 +34,8 @@
 \makeatother
 
 \begin{document}
+\tableofcontents{}
+
 
 \section{Name}
 
@@ -48,8 +59,8 @@ on close''} is a \emph{mq\_copy} command line option.
 POSIX message queues allow processes to exchange data in the form
 of messages.
 
-\emph{mq\_copy} supports line oriented, ``C'' string messages. That
-is, lines terminated by the new-line character.
+\emph{mq\_copy} supports line oriented, string messages. That is,
+lines terminated by the new-line character.
 
 \emph{mq\_copy} provides two basic functions: \emph{copy\_in} and
 \emph{copy\_out}.
@@ -61,4 +72,28 @@ as line oriented strings to \emph{stdout}.
 \end{itemize}
 
 \section{Arguments}
+
+\emph{mq\_copy} {[}--in | --out{]} {[}options{]} \emph{/queue\_name}
+
+The minimum command arguments are the function, either \emph{--in}
+(copy\_in) or \emph{--out} (copy\_out) and the name of an existing
+queue. The GLIBC library requires that the queue name begin with the
+path separator character '/'.
+
+
+\subsection{Function}
+\begin{lyxlist}{00.00.0000}
+\item [{--ci~--in~-i}] copy stdin to queue
+\item [{--co~--out~-o}] copy queue to stdout
+\end{lyxlist}
+
+\subsection{Options}
+\begin{description}
+\item [{--create~--cr~-c}] Create queue if not already present on open
+\item [{--exclusive~--ex~-x}] Create queue on open, queue must not exist.
+\item [{default}] Open existing queue
+\item [{--ro~-r}] Open queue as read-only
+\item [{--wo~-w}] Open queue as write-only
+\item [{default}] Open queue as read-write\end{description}
+
 \end{document}

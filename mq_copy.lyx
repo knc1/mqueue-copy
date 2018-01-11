@@ -148,15 +148,7 @@ POSIX message queues allow processes to exchange data in the form of messages.
 \emph on
 mq_copy
 \emph default
- supports line oriented, 
-\begin_inset Quotes eld
-\end_inset
-
-C
-\begin_inset Quotes erd
-\end_inset
-
- string messages.
+ supports line oriented, string messages.
  That is, lines terminated by the new-line character.
 \end_layout
 
@@ -203,6 +195,30 @@ stdout
 
 \begin_layout Section
 Arguments
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+mq_copy
+\emph default
+ [--in | --out] [options] 
+\emph on
+/queue_name
+\end_layout
+
+\begin_layout Standard
+The minimum command arguments are the function, either 
+\emph on
+--in
+\emph default
+ (copy_in) or 
+\emph on
+--out
+\emph default
+ (copy_out) and the name of an existing queue.
+ The GLIBC library requires that the queue name begin with the path separator
+ character '/'.
 \end_layout
 
 \end_body
