@@ -252,14 +252,11 @@ out ]
 \end_layout
 
 \begin_layout Standard
-The minimum command arguments are the function, either 
-\emph on
---in
-\emph default
- (copy_in) or 
-\emph on
---out
-\emph default
+The minimum command arguments are the function, either \SpecialChar \nobreakdash-
+\SpecialChar \nobreakdash-
+in (copy_in) or \SpecialChar \nobreakdash-
+\SpecialChar \nobreakdash-
+out
  (copy_out) and the name of an existing queue.
  The GLIBC library requires that the queue name begin with the path separator
  character '/'.

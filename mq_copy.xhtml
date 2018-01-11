@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="GENERATOR" content="LyX 2.1.4" />
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<title>LyX Document</title>
+<style type='text/css'>
+/* Layout-provided Styles */
+div.standard {
+margin-bottom: 2ex;
+}
+h2.section {
+font-family: sans-serif;
+font-weight: bold;
+font-size: large;
+margin-top: 1.3ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+ul.itemize {
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+margin-left: 3ex;
+text-align: left;
+
+}
+h3.subsection {
+font-family: sans-serif;
+font-weight: bold;
+font-size: large;
+margin-top: 0.9ex;
+margin-bottom: 0.5ex;
+text-align: left;
+
+}
+div.lyx_code {
+font-family: monospace;
+margin-top: 0.5ex;
+margin-bottom: 0.5ex;
+margin-left: 3ex;
+margin-right: 3ex;
+text-align: left;
+
+}
+ div.toc {
+   margin: 2em 0em;
+   border-style: solid;
+   border-width: 2px 0px;
+   padding: 1em 0em;
+ }
+ h2.tochead { font-size: x-large; font-weight: bold; }
+ div.lyxtoc-0 {
+   margin: 2em 0em 0em 0em;
+   font-size: xx-large;
+   font-weight: bold;
+ }
+ div.lyxtoc-1 {
+   margin: 1em 0em 0em 0em;
+   font-size: x-large;
+   font-weight: bold;
+ }
+ div.lyxtoc-2 {
+   margin: 0em 0.1em 0em 1em;
+   font-size: large;
+   font-weight: normal;
+ }
+ div.lyxtoc-3 { margin: 0em 0.1em 0em 0.5em; font-size: medium; }
+ div.lyxtoc-4 { margin: 0em 0.1em 0em 0.5em; }
+ div.lyxtoc-5 { margin: 0em 0.1em 0em 0.5em; }
+ div.lyxtoc-6 { margin: 0em 0.1em 0em 0.5em; }
+ a.tocentry {
+   text-decoration: none;
+   color: black;
+ }
+ a.tocentry:visited { color: black; }
+
+
+</style>
+</head>
+<body>
+
+<div class='toc'><h2 class='tochead section'>Table of Contents</h2>
+
+
+<div class='lyxtoc-1'><div class='lyxtoc-2'><a href='#magicparlabel-2' class='tocentry'>1 Name</a>
+</div>
+
+<div class='lyxtoc-2'><a href='#magicparlabel-4' class='tocentry'>2 Description</a>
+</div>
+
+<div class='lyxtoc-2'><a href='#magicparlabel-13' class='tocentry'>3 Arguments</a>
+
+
+<div class='lyxtoc-3'><a href='#magicparlabel-16' class='tocentry'>3.1 Function</a>
+</div>
+
+<div class='lyxtoc-3'><a href='#magicparlabel-19' class='tocentry'>3.2 Options</a>
+</div>
+</div>
+</div>
+</div>
+
+<h2 class="section"><a id='magicparlabel-2' /><span class="section_label">1</span> Name</h2>
+<div class="standard"><a id='magicparlabel-3' /><em>mq_copy</em> - Command line interface to Linux, POSIX, message queues.</div>
+<h2 class="section"><a id='magicparlabel-4' /><span class="section_label">2</span> Description</h2>
+<div class="standard"><a id='magicparlabel-5' />Provides a command line interface, usable by scripting languages, to the Linux system of POSIX message queues.</div>
+
+<div class="standard"><a id='magicparlabel-6' />The Linux system provides the POSIX message queues as a modified file descriptor. The default location is under the directory: <em>/dev/mqueue</em> .</div>
+
+<div class="standard"><a id='magicparlabel-7' />POSIX message queues have kernel persistence. If not removed by <em>unlink</em>, the queue will exist until the system is shut down. The action: <em>&ldquo;unlink on close&rdquo;</em> is a <em>mq_copy</em> command line option.</div>
+
+<div class="standard"><a id='magicparlabel-8' />POSIX message queues allow processes to exchange data in the form of messages.</div>
+
+<div class="standard"><a id='magicparlabel-9' /><em>mq_copy</em> supports line oriented, string messages. That is, lines terminated by the new-line character.</div>
+
+<div class="standard"><a id='magicparlabel-10' /><em>mq_copy</em> provides two basic functions: <em>copy_in</em> and <em>copy_out</em>.</div>
+
+<ul class="itemize"><a id='magicparlabel-11' /><li class="itemize_item">The <em>copy-in</em> function copies line oriented strings on <em>stdin</em> as messages to a specified queue.</li>
+<li class="itemize_item">The <em>copy-out</em> function copies messages from the specified queue as line oriented strings to <em>stdout</em>.</li>
+</ul>
+<h2 class="section"><a id='magicparlabel-13' /><span class="section_label">3</span> Arguments</h2>
+<div class="standard"><a id='magicparlabel-14' />&emsp;&emsp;<em>&nbsp;mq_copy</em>&emsp;&emsp;&nbsp;[ &#8209;&#8209;in | &#8209;&#8209;out ]&emsp;&emsp;&nbsp;[ options ]&emsp;&emsp;<em>&nbsp;/queue_name</em></div>
+
+<div class="standard"><a id='magicparlabel-15' />The minimum command arguments are the function, either &#8209;&#8209;in (copy_in) or &#8209;&#8209;out (copy_out) and the name of an existing queue. The GLIBC library requires that the queue name begin with the path separator character '/'.</div>
+<h3 class="subsection"><a id='magicparlabel-16' /><span class="subsection_label">3.1</span> Function</h3>
+<div class="standard"><a id='magicparlabel-17' />&emsp;&emsp;&nbsp;[ &#8209;&#8209;ci | &#8209;&#8209;in | &#8209;i ]&emsp;&emsp;&nbsp;copy stdin to queue</div>
+
+<div class="standard"><a id='magicparlabel-18' />&emsp;&emsp;&nbsp;[ &#8209;&#8209;co | &#8209;&#8209;out | &#8209;o ]&emsp;&emsp;&nbsp;copy queue to stdout</div>
+<h3 class="subsection"><a id='magicparlabel-19' /><span class="subsection_label">3.2</span> Options</h3>
+<div class="standard"><a id='magicparlabel-20' />&emsp;&emsp;&nbsp;[ &#8209;&#8209;create | &#8209;&#8209;cr | &#8209;c ]&emsp;&emsp;&nbsp;Create queue if not already present on open</div>
+
+<div class="standard"><a id='magicparlabel-21' />&emsp;&emsp;&nbsp;[ &#8209;&#8209;exclusive | &#8209;&#8209;ex | &#8209;x ]&emsp;&emsp;&nbsp;Create queue on open, queue must not exist.</div>
+
+<div class="standard"><a id='magicparlabel-22' />&emsp;&emsp;&nbsp;Default &emsp;&emsp;&nbsp;Open existing queue</div>
+<div style='height:1ex'></div>
+
+<div class="standard"><a id='magicparlabel-23' />&emsp;&emsp;&nbsp;[ &#8209;&#8209;ro | &#8209;r ]&emsp;&emsp;&nbsp;Open queue as read-only</div>
+
+<div class="standard"><a id='magicparlabel-24' />&emsp;&emsp;&nbsp;[ &#8209;&#8209;wo | &#8209;w ]&emsp;&emsp;&nbsp;Open queue as write-only</div>
+
+<div class="standard"><a id='magicparlabel-25' />&emsp;&emsp;&nbsp;Default&emsp;&emsp;&nbsp;Open queue as read-write</div>
+<div style='height:1ex'></div>
+
+<div class="standard"><a id='magicparlabel-26' />&emsp;&emsp;&nbsp;[ &#8209;&#8209;mode | &#8209;&#8209;md | &#8209;m ]&emsp;&emsp;&nbsp;&lt;perm&gt;&emsp;&emsp;&nbsp;Set user and group permissions. Permissions must be either three or four octal digits (not symbols).</div>
+
+<div class="standard"><a id='magicparlabel-27' />&emsp;&emsp;&nbsp;Default&emsp;&emsp;&nbsp;0660</div>
+
+<div class="standard"><a id='magicparlabel-28' />&emsp;&emsp;&nbsp;[ &#8209;&#8209;attributes | &#8209;&#8209;at | &#8209;a ]&emsp;&emsp;&nbsp;&lt;at-list&gt;&emsp;&emsp;&nbsp;One or more, comma separated, name=value pairs or feature.</div>
+
+<div class="standard"><a id='magicparlabel-29' />&emsp;&emsp;&nbsp;Example, showing default values:</div>
+
+<div class="lyx_code"><a id='magicparlabel-30' /><div class="lyx_code_item">-a maxmsgs=10,msgsize=256,noblock</div>
+<div class="lyx_code_item">where:</div>
+<div class="lyx_code_item">maxmsgs: The maximum number of messages the queue will hold.</div>
+<div class="lyx_code_item">msgsize: The maximum byte length of any single message.</div>
+<div class="lyx_code_item">noblock: Disable the default blocking behavior (disabled).</div>
+</div>
+
+<div style='height:1ex'></div>
+
+<div class="standard"><a id='magicparlabel-36' />&emsp;&emsp;&nbsp;[ &#8209;&#8209;no-block | &#8209;&#8209;nb | &#8209;n ]&emsp;&emsp;&nbsp;Open descriptor as non-blocking.</div>
+
+<div class="standard"><a id='magicparlabel-37' />&emsp;&emsp;&nbsp;Default&emsp;&emsp;&nbsp;Blocking (Non-blocking operation is disabled.)</div>
+
+<div class="standard"><a id='magicparlabel-38' />&emsp;&emsp;&nbsp;[ &#8209;&#8209;time | &#8209;t ]&emsp;&emsp;&nbsp;&lt;tenths second&gt;&emsp;&emsp;&nbsp;Set maximum time to block in tenths of a second.</div>
+
+<div class="standard"><a id='magicparlabel-39' />Copy-in will block if no space on queue for a new message. </div>
+
+<div class="standard"><a id='magicparlabel-40' />Copy-out will block if no message on queue to be read.</div>
+
+<div class="standard"><a id='magicparlabel-41' />&emsp;&emsp;&nbsp;Default&emsp;&emsp;&nbsp;No time limit for condition to clear.</div>
+<div style='height:1ex'></div>
+
+<div class="standard"><a id='magicparlabel-42' />&emsp;&emsp;&nbsp;[ ‑‑priority | &#8209;&#8209;pri | &#8209;p ]&emsp;&emsp;&nbsp;&lt;0 .. 31&gt;&emsp;&emsp;&nbsp;Set the message priority during Copy-in. </div>
+
+<div class="standard"><a id='magicparlabel-43' />&emsp;&emsp;&nbsp;Default&emsp;&emsp;&nbsp;15</div>
+
+<div class="standard"><a id='magicparlabel-44' />Lower value is a higher priority. The mqueue delivers the oldest message of the highest priority first.</div>
+<div style='height:1ex'></div>
+
+<div class="standard"><a id='magicparlabel-45' />&emsp;&emsp;&nbsp;[ &#8209;&#8209;unlink | &#8209;&#8209;ul | &#8209;u ]&emsp;&emsp;&nbsp;Unlink (delete name) queue name prior to close. Like a file descriptor, the queue remains available to any queue descriptor that has it open at the time of the unlink.</div>
+</body>
+</html>
