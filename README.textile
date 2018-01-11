@@ -21,27 +21,27 @@ _mq&#95;copy_ provides two basic functions: _copy&#95;in_ and _copy&#95;out_.
 
 h1(#arguments). Arguments
 
-_mq&#95;copy_ &#45;&#45;in &#124; &#45;&#45;out ] options ]_/queue&#95;name_
+_ mq&#95;copy_ [ &#45;&#45;in &#124; &#45;&#45;out ] [ options ]_ /queue&#95;name_
 
 The minimum command arguments are the function, either _ - in_ (copy&#95;in) or _ - out_ (copy&#95;out) and the name of an existing queue. The GLIBC library requires that the queue name begin with the path separator character '/'.
 
 h2(#function). Function
 
-&#45;&#45;ci &#124; &#45;&#45;in &#124; &#45;i ]copy stdin to queue
+ [ &#45;&#45;ci &#124; &#45;&#45;in &#124; &#45;i ] copy stdin to queue
 
-&#45;&#45;co &#124; &#45;&#45;out &#124; &#45;o ]copy queue to stdout
+ [ &#45;&#45;co &#124; &#45;&#45;out &#124; &#45;o ] copy queue to stdout
 
 h2(#options). Options
 
-&#45;&#45;create &#124; &#45;&#45;cr &#124; &#45;c ]Create queue if not already present on open
+ [ &#45;&#45;create &#124; &#45;&#45;cr &#124; &#45;c ] Create queue if not already present on open
 
-&#45;&#45;exclusive &#124; &#45;&#45;ex &#124; &#45;x ] Create queue on open, queue must not exist.
+ [ &#45;&#45;exclusive &#124; &#45;&#45;ex &#124; &#45;x ] Create queue on open, queue must not exist.
 
-defaultOpen existing queue
+ default  Open existing queue
 
-&#45;&#45;ro &#124; &#45;r ]Open queue as read&#45;only
+ [ &#45;&#45;ro &#124; &#45;r ] Open queue as read&#45;only
 
-&#45;&#45;wo &#124; &#45;w ]Open queue as write&#45;only
+ [ &#45;&#45;wo &#124; &#45;w ] Open queue as write&#45;only
 
-defaultOpen queue as read&#45;write
+ default Open queue as read&#45;write
 

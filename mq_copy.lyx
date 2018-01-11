@@ -212,10 +212,18 @@ Arguments
 
 
 \emph on
+
+\begin_inset space ~
+\end_inset
+
 mq_copy
 \emph default
 
 \begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 [ \SpecialChar \nobreakdash-
@@ -226,12 +234,20 @@ out ]
 \begin_inset space \qquad{}
 \end_inset
 
+
+\begin_inset space ~
+\end_inset
+
 [ options ]
 \begin_inset space \qquad{}
 \end_inset
 
 
 \emph on
+
+\begin_inset space ~
+\end_inset
+
 /queue_name
 \end_layout
 
@@ -257,6 +273,10 @@ Function
 \begin_inset space \qquad{}
 \end_inset
 
+
+\begin_inset space ~
+\end_inset
+
 [ \SpecialChar \nobreakdash-
 \SpecialChar \nobreakdash-
 ci | \SpecialChar \nobreakdash-
@@ -266,11 +286,19 @@ i ]
 \begin_inset space \qquad{}
 \end_inset
 
+
+\begin_inset space ~
+\end_inset
+
 copy stdin to queue
 \end_layout
 
 \begin_layout Standard
 \begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 [ \SpecialChar \nobreakdash-
@@ -280,6 +308,10 @@ co | \SpecialChar \nobreakdash-
 out | \SpecialChar \nobreakdash-
 o ]
 \begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 copy queue to stdout
@@ -293,6 +325,10 @@ Options
 \begin_inset space \qquad{}
 \end_inset
 
+
+\begin_inset space ~
+\end_inset
+
 [ \SpecialChar \nobreakdash-
 \SpecialChar \nobreakdash-
 create | \SpecialChar \nobreakdash-
@@ -302,6 +338,10 @@ c ]
 \begin_inset space \qquad{}
 \end_inset
 
+
+\begin_inset space ~
+\end_inset
+
 Create queue if not already present on open
 \end_layout
 
@@ -309,13 +349,21 @@ Create queue if not already present on open
 \begin_inset space \qquad{}
 \end_inset
 
+
+\begin_inset space ~
+\end_inset
+
 [ \SpecialChar \nobreakdash-
 \SpecialChar \nobreakdash-
 exclusive | \SpecialChar \nobreakdash-
 \SpecialChar \nobreakdash-
 ex | \SpecialChar \nobreakdash-
-x ] 
+x ]
 \begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 Create queue on open, queue must not exist.
@@ -325,8 +373,16 @@ Create queue on open, queue must not exist.
 \begin_inset space \qquad{}
 \end_inset
 
-default
+
+\begin_inset space ~
+\end_inset
+
+default 
 \begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 Open existing queue
@@ -336,11 +392,19 @@ Open existing queue
 \begin_inset space \qquad{}
 \end_inset
 
+
+\begin_inset space ~
+\end_inset
+
 [ \SpecialChar \nobreakdash-
 \SpecialChar \nobreakdash-
 ro | \SpecialChar \nobreakdash-
 r ]
 \begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 Open queue as read-only
@@ -350,11 +414,19 @@ Open queue as read-only
 \begin_inset space \qquad{}
 \end_inset
 
+
+\begin_inset space ~
+\end_inset
+
 [ \SpecialChar \nobreakdash-
 \SpecialChar \nobreakdash-
 wo | \SpecialChar \nobreakdash-
 w ]
 \begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 Open queue as write-only
@@ -364,8 +436,16 @@ Open queue as write-only
 \begin_inset space \qquad{}
 \end_inset
 
+
+\begin_inset space ~
+\end_inset
+
 default
 \begin_inset space \qquad{}
+\end_inset
+
+
+\begin_inset space ~
 \end_inset
 
 Open queue as read-write

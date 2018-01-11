@@ -65,8 +65,8 @@ as line oriented strings to \emph{stdout}.
 
 \section{Arguments}
 
-\qquad{}\emph{mq\_copy}\qquad{}{[} \nobreakdash-\nobreakdash-in
-| \nobreakdash-\nobreakdash-out {]}\qquad{}{[} options {]}\qquad{}\emph{/queue\_name}
+\qquad{}\emph{~mq\_copy}\qquad{}~{[} \nobreakdash-\nobreakdash-in
+| \nobreakdash-\nobreakdash-out {]}\qquad{}~{[} options {]}\qquad{}\emph{~/queue\_name}
 
 The minimum command arguments are the function, either \emph{--in}
 (copy\_in) or \emph{--out} (copy\_out) and the name of an existing
@@ -76,30 +76,30 @@ path separator character '/'.
 
 \subsection{Function}
 
-\qquad{}{[} \nobreakdash-\nobreakdash-ci | \nobreakdash-\nobreakdash-in
-| \nobreakdash-i {]}\qquad{}copy stdin to queue
+\qquad{}~{[} \nobreakdash-\nobreakdash-ci | \nobreakdash-\nobreakdash-in
+| \nobreakdash-i {]}\qquad{}~copy stdin to queue
 
-\qquad{}{[} \nobreakdash-\nobreakdash-co | \nobreakdash-\nobreakdash-out
-| \nobreakdash-o {]}\qquad{}copy queue to stdout
+\qquad{}~{[} \nobreakdash-\nobreakdash-co | \nobreakdash-\nobreakdash-out
+| \nobreakdash-o {]}\qquad{}~copy queue to stdout
 
 
 \subsection{Options}
 
-\qquad{}{[} \nobreakdash-\nobreakdash-create | \nobreakdash-\nobreakdash-cr
-| \nobreakdash-c {]}\qquad{}Create queue if not already present
+\qquad{}~{[} \nobreakdash-\nobreakdash-create | \nobreakdash-\nobreakdash-cr
+| \nobreakdash-c {]}\qquad{}~Create queue if not already present
 on open
 
-\qquad{}{[} \nobreakdash-\nobreakdash-exclusive | \nobreakdash-\nobreakdash-ex
-| \nobreakdash-x {]} \qquad{}Create queue on open, queue must not
+\qquad{}~{[} \nobreakdash-\nobreakdash-exclusive | \nobreakdash-\nobreakdash-ex
+| \nobreakdash-x {]}\qquad{}~Create queue on open, queue must not
 exist.
 
-\qquad{}default\qquad{}Open existing queue
+\qquad{}~default \qquad{}~Open existing queue
 
-\qquad{}{[} \nobreakdash-\nobreakdash-ro | \nobreakdash-r {]}\qquad{}Open
+\qquad{}~{[} \nobreakdash-\nobreakdash-ro | \nobreakdash-r {]}\qquad{}~Open
 queue as read-only
 
-\qquad{}{[} \nobreakdash-\nobreakdash-wo | \nobreakdash-w {]}\qquad{}Open
+\qquad{}~{[} \nobreakdash-\nobreakdash-wo | \nobreakdash-w {]}\qquad{}~Open
 queue as write-only
 
-\qquad{}default\qquad{}Open queue as read-write
+\qquad{}~default\qquad{}~Open queue as read-write
 \end{document}
