@@ -23,7 +23,7 @@ h1(#arguments). Arguments
 
 _ mq&#95;copy_ [ &#45;&#45;in &#124; &#45;&#45;out ] [ options ]_ /queue&#95;name_
 
-The minimum command arguments are the function, either _ - in_ (copy&#95;in) or _ - out_ (copy&#95;out) and the name of an existing queue. The GLIBC library requires that the queue name begin with the path separator character '/'.
+The minimum command arguments are the function, either &#45;&#45;in (copy&#95;in) or &#45;&#45;out (copy&#95;out) and the name of an existing queue. The GLIBC library requires that the queue name begin with the path separator character '/'.
 
 h2(#function). Function
 
