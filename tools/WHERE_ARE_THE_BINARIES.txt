@@ -1,0 +1,50 @@
+So where is the binary toolchain?
+See: https://www.adrive.com/public/vKrC5w/gcc-toolchain_amd64.tar.xz (98.4MB)
+
+The toolchain was not made by the enclosed script.
+See: https://www.adrive.com/public/FfQaZm/bld-x.sh
+
+It was built 'by hand' following the directions at the link in the script.
+Notes kept during the work and the script updated to match (should work).
+
+Build (and runtime):
+Kernel: 4.10.0
+Minimum Kernel: 2.6.32 amd64 (x86_64)
+GLIBC: 2.23
+GCC: 5.4.0
+
+Target:
+Kernel: 2.6.31.14
+Minimum Kernel: 2.6.31 (Kindle Touch fw 5.3.7.3)
+Binutils: 2.28.1
+GCC (c, c++): 4.9.4
+GLIBC: 2.18
+
+The KT (K5) running 5.3.7.3 (now current) has libc-2.12 installed.
+If your program requires any of these symbols:
+    74: 000d26a0    36 FUNC    WEAK   DEFAULT   11 clock_adjtime@@GLIBC_2.14
+   286: 000e3708    24 FUNC    GLOBAL DEFAULT   11 __fdelt_warn@@GLIBC_2.15
+   346: 000e3708    24 FUNC    GLOBAL DEFAULT   11 __fdelt_chk@@GLIBC_2.15
+   482: 000d26a0    36 FUNC    WEAK   DEFAULT   11 process_vm_writev@@GLIBC_2.15
+   500: 000d20b4    36 FUNC    GLOBAL DEFAULT   11 prlimit@@GLIBC_2.13
+   514: 000d26a0    36 FUNC    WEAK   DEFAULT   11 name_to_handle_at@@GLIBC_2.14
+   525: 00098ae8   468 FUNC    GLOBAL DEFAULT   11 scandirat@@GLIBC_2.15
+   557: 000d26a0    36 FUNC    WEAK   DEFAULT   11 fanotify_init@@GLIBC_2.13
+   976: 000d26a0    36 FUNC    WEAK   DEFAULT   11 setns@@GLIBC_2.14
+   990: 000d26a0    36 FUNC    WEAK   DEFAULT   11 open_by_handle_at@@GLIBC_2.14
+  1100: 000d30c0    36 FUNC    WEAK   DEFAULT   11 sendmmsg@@GLIBC_2.14
+  1240: 000d26a0    36 FUNC    WEAK   DEFAULT   11 prlimit64@@GLIBC_2.13
+  1319: 000cb0ac    36 FUNC    GLOBAL DEFAULT   11 syncfs@@GLIBC_2.14
+  1534: 000c1204    44 FUNC    GLOBAL DEFAULT   11 posix_spawn@@GLIBC_2.15
+  1589: 000d26a0    36 FUNC    WEAK   DEFAULT   11 fanotify_mark@@GLIBC_2.13
+  1784: 000d26a0    36 FUNC    WEAK   DEFAULT   11 process_vm_readv@@GLIBC_2.15
+  1940: 00098cbc   468 FUNC    GLOBAL DEFAULT   11 scandirat64@@GLIBC_2.15
+  1979: 000c1230    44 FUNC    GLOBAL DEFAULT   11 posix_spawnp@@GLIBC_2.15
+ 12523: 000c1204    44 FUNC    GLOBAL DEFAULT   11 posix_spawn@@GLIBC_2.15
+ 13180: 000c1230    44 FUNC    GLOBAL DEFAULT   11 posix_spawnp@@GLIBC_2.15
+Note: There are no symbols that were introduced in 2.16, 2.17, or 2.18
+
+Then to run on the KT (K5) you will have to provide a 'shim' library that will
+provide these symbols.
+There are guides on the Internet on how to create such 'shim' code.
+How to use them on the compiler command line is left as a reader's exercise.
